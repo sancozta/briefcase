@@ -51,6 +51,11 @@ function SendMail(){
                 ]
             });
 
+            $("#name").val("");
+            $("#email").val("");
+            $("#phone").val("");
+            $("#body").html("");
+
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log("Erro ao Realizar Requisição Para Mail !");
