@@ -51,10 +51,10 @@ function SendMail(){
                 ]
             });
 
-            $("#name").val("");
-            $("#email").val("");
-            $("#phone").val("");
-            $("#body").html("");
+            $("#name").val("").change();
+            $("#email").val("").change();
+            $("#phone").val("").change();
+            $("#body").html("").change();
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
