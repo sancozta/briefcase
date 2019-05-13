@@ -29,7 +29,7 @@ class mails {
             $mail->Port         = 587;
             $mail->CharSet      = "UTF-8";
         
-            $mail->setFrom(getenv("MAIL_NAME"), "Notification - Website");
+            $mail->setFrom(getenv("MAIL_NAME"), "Notification");
             $mail->isSMTP();
             
             //DETERMINANDO REMETENTE
