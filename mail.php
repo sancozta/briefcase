@@ -39,11 +39,13 @@ class mails {
             $mail->Subject = "Contato Via Website - Assunto Diverso";
         
             //DETERMINANDO CORPO
-            $mail->Body    = $data;
-
+            // $mail->Body    = $data;
+            $mail->msgHTML = $data;
+            
             //CONVERT HTML
             $mail->isHTML(true);
         
+            //SEND
             $mail->send();
         
             return true ;
@@ -65,8 +67,8 @@ $phone  = (isset($_POST["phone"]))  ? $_POST["phone"]   : "" ;
 $body   = (isset($_POST["body"]))   ? $_POST["body"]    : "" ;
 
 //MONTANDO EMAIL
-// $data 	= htmlentities(file_get_contents("mail.html", FILE_BINARY));
-$data 	= file_get_contents("mail.html", FILE_TEXT);
+$data 	= htmlentities(file_get_contents("mail.html", FILE_BINARY));
+// $data 	= file_get_contents("mail.html", FILE_TEXT);
 
 $data   = str_replace("#NAME#", $name,    $data);
 $data   = str_replace("#MAIL#", $email,   $data);

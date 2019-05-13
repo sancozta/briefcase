@@ -54,7 +54,7 @@ function SendMail(){
             $("#name").val("").change();
             $("#email").val("").change();
             $("#phone").val("").change();
-            $("#body").html("").change();
+            $("#body").val("").blur();
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
