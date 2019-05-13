@@ -31,16 +31,18 @@ class mails {
         
             $mail->setFrom(getenv("MAIL_NAME"), "Notification - Website");
             $mail->isSMTP();
-            $mail->isHTML(true);
-        
+            
             //DETERMINANDO REMETENTE
             $mail->addAddress(getenv("MAIL_MYGM"), getenv("MAIL_MYNM"));
         
             //DETERMINANDO ASSUNTO
-            $mail->Subject = "Contato Via Website - Assunto Diverso !";
+            $mail->Subject = "Contato Via Website - Assunto Diverso";
         
             //DETERMINANDO CORPO
             $mail->Body    = $data;
+
+            //CONVERT HTML
+            $mail->isHTML(true);
         
             $mail->send();
         
