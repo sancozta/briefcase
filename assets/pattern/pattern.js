@@ -18,7 +18,7 @@ function SendMail(){
             name    : $("#name").val(),
             email   : $("#email").val(),
             phone   : $("#phone").val(),
-            body    : $("#body").html()
+            body    : $("#body").val()
         },
         success: function (response) {
             

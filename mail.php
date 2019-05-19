@@ -10,6 +10,13 @@ if(file_exists("vendor/autoload.php")){
 	require("vendor/autoload.php");
 }
 
+//LOAD ENV NO SERVER LOCAL
+if(php_sapi_name() == "cli-server") {
+    $dotenv = new Dotenv\Dotenv(__DIR__); 
+    $dotenv->load();
+}
+
+//LOAD PHPMAILER
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -50,7 +57,7 @@ class mails {
             return true ;
         
         } catch (Exception $e) {
-        
+            var_dump($e);
             return false ;
         
         }
@@ -66,7 +73,7 @@ $phone  = (isset($_POST["phone"]))  ? $_POST["phone"]   : "" ;
 $body   = (isset($_POST["body"]))   ? $_POST["body"]    : "" ;
 
 //MONTANDO EMAIL
-$data 	= htmlentities(file_get_contents("mail.html", FILE_BINARY));
+$data 	= file_get_contents("mail.html", FILE_BINARY);
 
 $data   = str_replace("#NAME#", $name,    $data);
 $data   = str_replace("#MAIL#", $email,   $data);
