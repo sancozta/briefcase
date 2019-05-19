@@ -11,6 +11,10 @@
     <meta name="keywords" content="desenvolvimento, webdesign, consultoria, mobile, php, fullstack, marketing">
     <meta name="author" content="Samuel Costa">
 
+    <meta name="theme-color" content="#171941">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#171941">
+    <meta name="msapplication-navbutton-color" content="#171941">
+
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://sancozta.com.br">
