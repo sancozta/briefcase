@@ -1,5 +1,5 @@
-### Minifiedarc
+### Briefcase
 
 <p style="text-align: justify;">
-É uma estrutura criada para a inicialização de projetos fast, buscando facilitar o desenvolvimento de pequenas soluções com a utilização do php como linguagem base. Essas estrutura trabalha com o padrão MVC bastante testado e aprovado pela comunidade de software.
+Projeto com o objetivo de expor alguns projetos realizados em alguns tecnologias diferentes. Oferece uma interface para contato com o objetivo de trabalhos e parcerias em projetos. Buscar expor com mais detalhes os projetos e habilidades desenvolvidas.
 </p>
